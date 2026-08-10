@@ -3,7 +3,7 @@ project(nls)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(nls nls.cpp)
+add_executable(nls src/nls.cpp)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
     target_compile_options(nls PRIVATE -Wall -Wextra -Wpedantic)
