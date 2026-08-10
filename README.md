@@ -22,7 +22,8 @@
 
   ## Building
 
-Requires a C++23 compiler (uses `std::print`).
+Requires a C++23 compiler (uses `std::print`) and CMake version 3.28.
+
 
 ​```
 cmake -B build
