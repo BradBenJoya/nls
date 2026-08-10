@@ -100,11 +100,7 @@ enum class SortMode { None, Time, Size };
 int main(int argc, char** argv) {
     std::unordered_set<std::string_view> args(argv, argv + argc);
     std::unordered_set<std::filesystem::path> paths;
-
-    // Track sort mode by scanning argv IN ORDER, so whichever of -t/-S appears
-    // last on the command line wins, matching real ls behavior. Previously this
-    // was decided by which "if (args.contains(...))" block happened to appear
-    // later in the source, not by what the user actually typed.
+    
     SortMode sortMode = SortMode::None;
 
     for (size_t i{1uz}; i < static_cast<size_t>(argc); ++i) {
